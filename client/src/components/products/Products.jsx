@@ -9,6 +9,7 @@ const Products = () => {
         {name: "...", id :1 , image:  "....." },
         {name: "...", id :2 , image:  "....." }
     ];
+    
   return (
     <div>
         <Grid container spacing={3} >
