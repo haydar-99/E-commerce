@@ -1,12 +1,15 @@
 import {  AppBar, Badge, Box, IconButton, Toolbar, Typography } from '@material-ui/core'
 import { ShoppingBasket } from '@material-ui/icons'
-import React from 'react'
+import React, { useContext } from 'react'
+import {stateContext} from "../../App"
 
-
-function Navbar({addedItems}) {
+function Navbar() {
+    const {shoppedItems} = useContext(stateContext);
   return (
     <Box >
-        { console.log(addedItems.length)}
+        
+        {console.log(shoppedItems)}
+        { console.log("this is the " + shoppedItems.length)}
        <AppBar position='fixed' color='inherit'  >
             <Toolbar>
                 <Typography variant='h5' >
@@ -16,7 +19,7 @@ function Navbar({addedItems}) {
                 <div/>
                 <div>
                     <IconButton color='inherit'>
-                        <Badge badgeContent={addedItems.length} color='secondary' >
+                        <Badge badgeContent={shoppedItems.length} color='secondary' >
                             <ShoppingBasket/>
                         </Badge>
                     </IconButton>

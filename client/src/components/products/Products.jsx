@@ -5,7 +5,7 @@ import logo from "../../assets/cartImage.jpg"
 
 
 
-const Products = ({Products,handleClick, addedItems}) => {
+const Products = ({Products}) => {
     
 
    
@@ -14,9 +14,9 @@ const Products = ({Products,handleClick, addedItems}) => {
     <div>
         <Grid container justifyContent ='center' spacing={3} >
             {
-                Products.map( (product) =>  (
-                    <Grid item key={product.id}>
-                        <Product product={product} handleClick={handleClick} addedItems = {addedItems} />
+                Products.map( (product, index ) =>  (
+                    <Grid item key={index}>
+                        <Product  product={product}  />
                     </Grid>
                 ))
             }

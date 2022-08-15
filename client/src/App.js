@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/products/Products'
 const products = [
@@ -7,18 +7,25 @@ const products = [
         {name: "...", id :2 , image:  "logo" , price: 3, description: "This is a product" },
         {name: "...", id :2 , image:  "logo" , price: 3, description: "This is a product" }
     ];
+
+export const stateContext  = createContext();    
 const App = () => {
-  const [addedItems, setAddedItems] = useState([]);
-  const handleClick = (item, addedItems)=>{
-    setAddedItems( ()=>  [...addedItems, item])
+  
+  const [shoppedItems, setShoppedItems ] = useState([])
+  const handleClick = (item, shoppedItems)=>{
+    setShoppedItems( ()=>  [...shoppedItems, item])
     
 }
+
   
   return (
+    <stateContext.Provider value ={{shoppedItems, handleClick }}> 
     <div>
-        <Navbar addedItems={addedItems} />
-        <Products Products = {products} addedItems= {addedItems} handleClick={handleClick} />
+        <Navbar  />
+        <Products Products = {products}  />
     </div>
+    </stateContext.Provider>
+   
   )
 }
 
