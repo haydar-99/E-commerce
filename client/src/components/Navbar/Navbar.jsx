@@ -3,9 +3,10 @@ import { ShoppingBasket } from '@material-ui/icons'
 import React from 'react'
 
 
-function Navbar() {
+function Navbar({addedItems}) {
   return (
     <Box >
+        { console.log(addedItems.length)}
        <AppBar position='fixed' color='inherit'  >
             <Toolbar>
                 <Typography variant='h5' >
@@ -15,7 +16,7 @@ function Navbar() {
                 <div/>
                 <div>
                     <IconButton color='inherit'>
-                        <Badge badgeContent={2} color='secondary' >
+                        <Badge badgeContent={addedItems.length} color='secondary' >
                             <ShoppingBasket/>
                         </Badge>
                     </IconButton>

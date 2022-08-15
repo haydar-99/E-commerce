@@ -1,8 +1,9 @@
 import { Card, CardActions, CardContent, CardMedia, Typography, IconButton } from '@material-ui/core'
 import {ShoppingCart} from "@material-ui/icons"
-import React from 'react'
+import React, { useState } from 'react'
 
-const Product = ({product}) => {
+const Product = ({product, handleClick, addedItems}) => {
+  
   return (
     <Card>
       <CardMedia image={product.image} title= {product.name} />
@@ -18,8 +19,8 @@ const Product = ({product}) => {
         </div>
       </CardContent>
       <CardActions>
-        <IconButton aria-label='Add to cart'>
-            <ShoppingCart/>
+        <IconButton aria-label='Add to cart'  onClick={()=>handleClick(product, addedItems)}>
+            <ShoppingCart />
         </IconButton>
       </CardActions>
     </Card>
