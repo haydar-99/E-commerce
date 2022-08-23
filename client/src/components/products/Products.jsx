@@ -11,7 +11,7 @@ const Products = ({Products}) => {
    
     
   return (
-    <div>
+    <div  style={{ marginTop: "100px"}}>
         <Grid container justifyContent ='center' spacing={3} >
             {
                 Products.map( (product, index ) =>  (
