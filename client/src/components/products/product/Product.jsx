@@ -9,16 +9,16 @@ const Product = ({product  }) => {
 
   return (
     <Card>
-      <CardMedia image={product.image} title= {product.name} />
+      <CardMedia image={product.Image} title= {product.Name} />
       <CardContent>
         <div>
           <Typography variant='h5' gutterBottom>
-            {product.name}
+            {product.Name}
           </Typography>
           <Typography>
-            {product.price}
+            {product.Price}
           </Typography>
-          <Typography variant='h4' color='textSecondary'>{product.description}</Typography>
+          <Typography variant='h4' color='textSecondary'>{product.Description}</Typography>
         </div>
       </CardContent>
       <CardActions>

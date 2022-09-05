@@ -7,9 +7,12 @@ const product = require("./models/products")
 // const router = require("./router/router")
 const  bodyParser = require('body-parser');
 const productModel = require("./models/products");
+var cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: true }))
 // app.use("/router", router)
+app.use(cors());
+
 app.get("/", async (req,res) =>{
     try {
         const pr = await productModel.find();

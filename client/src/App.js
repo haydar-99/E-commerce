@@ -1,28 +1,38 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState , useEffect} from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/products/Products'
-const products = [
-        {name: "...", id :0 , image:  "logo" , price: 1, description: "This is a product" },
-        {name: "...", id :1 , image:  "logo" , price: 3, description: "This is a product" },
-        {name: "...", id :2 , image:  "logo" , price: 3, description: "This is a product" },
-        {name: "...", id :2 , image:  "logo" , price: 3, description: "This is a product" }
-    ];
-
+import { fetchtProducts } from './api';
 export const stateContext  = createContext();    
-const App = () => {
-  
+const App =  () => {
+  const [pre, setPre] = useState([]);
   const [shoppedItems, setShoppedItems ] = useState([])
   const handleClick = (item, shoppedItems)=>{
-    setShoppedItems( ()=>  [...shoppedItems, item])
-    
-}
+    setShoppedItems( ()=>  [...shoppedItems, item])   
+  }
 
+
+
+useEffect(  () => {
   
+  async function fetchData(){
+    const respone = await fetchtProducts.then((reslt)=>{
+      setPre(...pre, reslt);
+    }).catch((e)=>{
+      console.log(e);
+    })
+  }
+  fetchData();  
+},[])
+
+
+
+
   return (
     <stateContext.Provider value ={{shoppedItems, handleClick }}> 
     <div>
+    {console.log("this is pre" + pre.length)}
         <Navbar  />
-        <Products Products = {products}  />
+        <Products Products = {pre}  />
     </div>
     </stateContext.Provider>
    
