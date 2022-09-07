@@ -1,24 +1,28 @@
 import { Card, CardActions, CardContent, CardMedia, Typography, IconButton } from '@material-ui/core'
-import {ShoppingCart} from "@material-ui/icons"
+import {ShoppingCart, Euro} from "@material-ui/icons"
 import React, {   useContext} from 'react'
 import { stateContext } from '../../../App'
-
+import bild from "../../../assets/logo192.png"
+import css from "./product.module.css"
 const Product = ({product  }) => {
   
   const {handleClick,shoppedItems } = useContext(stateContext)
 
   return (
-    <Card>
-      <CardMedia image={product.Image} title= {product.Name} />
+    <Card className={css.card}>
+      <div className={css.imgDiv} style={{backgroundImage:`${bild} `}}> </div>
       <CardContent>
-        <div>
-          <Typography variant='h5' gutterBottom>
-            {product.Name}
+        <div className={css.cardContent}>
+          <Typography variant='h6' gutterBottom>
+                      {product.Name}
           </Typography>
-          <Typography>
-            {product.Price}
+
+          <Typography variant='h4'>
+                      {product.Price}<Euro></Euro>
           </Typography>
-          <Typography variant='h4' color='textSecondary'>{product.Description}</Typography>
+
+          <Typography variant='h8' color='textSecondary'>{product.Description}
+          </Typography>
         </div>
       </CardContent>
       <CardActions>

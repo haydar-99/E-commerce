@@ -3,6 +3,7 @@ import { BorderAll, ShoppingBasket } from '@material-ui/icons'
 import React, { useContext } from 'react'
 import {stateContext} from "../../App"
 import { stys } from './NavBarStyling'
+import cartimage from "../../assets/cartImage.jpg"
 
 
 
@@ -17,7 +18,7 @@ function Navbar() {
             <ul  style={stys.navbarUl} >
              <li style={stys.navLi} >
                 <Typography variant='h5'   >
-                    <img src='' alt='' height="25px" />
+                    <img style={{height:"30px", marginTop:"5px"}} src= {cartimage} alt='' height="25px" />
                     Store project
                 </Typography>
              </li>

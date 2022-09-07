@@ -2,6 +2,7 @@ import React, { createContext, useState , useEffect} from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/products/Products'
 import { fetchtProducts } from './api';
+import Navigationbar from './components/Navbar/Navigationbar';
 export const stateContext  = createContext();    
 const App =  () => {
   const [pre, setPre] = useState([]);
@@ -28,10 +29,11 @@ useEffect(  () => {
 
 
   return (
-    <stateContext.Provider value ={{shoppedItems, handleClick }}> 
-    <div>
+    <stateContext.Provider  value ={{shoppedItems, handleClick }}> 
+    <div >
     {console.log("this is pre" + pre.length)}
-        <Navbar  />
+        <Navigationbar/>
+        {/* <Navbar  /> */}
         <Products Products = {pre}  />
     </div>
     </stateContext.Provider>

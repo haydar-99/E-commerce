@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Brush Script MT , cursive;
+    font-size: 30px;
+    background-color: #24252A;
+    height: 80px;
+}
+.header:first-child{
+     color: rgb(250, 229, 110);
+}
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+.header ul li{
+
+    display:inline-block;
+    margin-left: 100px;
+}
+
+
+.header ul li a{
+    text-decoration: none;
+    color: rgb(250, 229, 110);
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+   
+}
+.header ul li a:hover{
+    
+    color: rgba(0, 139, 169, 1);
+    font-size: 50px;
+}
+
+.basketDiv{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(47, 137, 216);
+    align-items: center;
+}
+.basket svg{
+    color: white;
+    font-size: 50px;
+    
+}
+.basket svg:hover{
+   font-size: 70px;
+   color: rgb(47, 137, 216);
+
+    
+}

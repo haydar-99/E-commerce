@@ -9,9 +9,9 @@ export const  stys = {
                 margin: "0",
                 padding: "0",
                 listStyleType: "none",
-                alignItems: "center",
+                alignItems: "center"
                
-                border: "5px solid black"
+                // border: "5px solid black"
             
             },
     navLi:{
@@ -20,7 +20,24 @@ export const  stys = {
     },
     navLiBasket:{
         float:"right",
-        backgroundColor:"black",
+        // backgroundColor:"black",
         marginRight: "10px"
     }
+}
+
+export const header={
+    header:{
+        display:"flex",
+        justifyContent: "space-between",
+        alignItems:"center",
+        padding: "30px 10px",
+        fontFamily: "Brush Script MT , cursive",
+        fontSize: "30px"
+    },
+    ul:{
+        
+    }
+
+
+
 }

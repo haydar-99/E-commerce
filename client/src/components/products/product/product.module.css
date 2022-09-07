@@ -1,0 +1,20 @@
+.card{
+    height:100%;
+    width:100%;
+    
+}
+.imgDiv{
+     background-image: url("C:\Users\Dator 3\Downloads\E-commerce\client\src\assets\cartImage.jpg");  
+    width: 100%;
+    height: 100px;
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+      /* object-fit: cover; */
+}
+.cardContent{
+    width:100%;
+    display: inline;
+    justify-content: space-between;
+    align-items: center;
+}
