@@ -3,6 +3,9 @@
     width:100%;
     
 }
+.card:hover{
+    padding: 5px;
+}
 .imgDiv{
      background-image: url("C:\Users\Dator 3\Downloads\E-commerce\client\src\assets\cartImage.jpg");  
     width: 100%;
