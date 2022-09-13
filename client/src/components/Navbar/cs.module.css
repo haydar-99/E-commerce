@@ -56,3 +56,19 @@
 
     
 }
+.item{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 3px;
+}
+.item img{
+    width:80px;
+    object-fit: cover;
+}
+
+
+

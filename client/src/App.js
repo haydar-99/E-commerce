@@ -3,10 +3,19 @@ import Navbar from './components/Navbar/Navbar'
 import Products from './components/products/Products'
 import { fetchtProducts } from './api';
 import Navigationbar from './components/Navbar/Navigationbar';
-export const stateContext  = createContext();    
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import cs from "./cs.module.css"
+export const stateContext  = createContext();  
+
+
+
 const App =  () => {
   const [pre, setPre] = useState([]);
   const [shoppedItems, setShoppedItems ] = useState([])
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true); console.log("the canvas is open");
+  const [show, setShow] = useState(false);
+
   const handleClick = (item, shoppedItems)=>{
     setShoppedItems( ()=>  [...shoppedItems, item])   
   }
@@ -35,6 +44,7 @@ useEffect(  () => {
         <Navigationbar/>
         {/* <Navbar  /> */}
         <Products Products = {pre}  />
+       
     </div>
     </stateContext.Provider>
    

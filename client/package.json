@@ -41,6 +41,8 @@
   },
   "devDependencies": {
     "axios": "^0.27.2",
-    "nodemon": "^2.0.19"
+    "bootstrap": "^5.2.1",
+    "nodemon": "^2.0.19",
+    "react-bootstrap": "^2.5.0"
   }
 }

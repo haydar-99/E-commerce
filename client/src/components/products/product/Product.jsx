@@ -7,7 +7,6 @@ import css from "./product.module.css"
 const Product = ({product  }) => {
   
   const {handleClick,shoppedItems } = useContext(stateContext)
-
   return (
     <Card className={css.card}>
       <div className={css.imgDiv} style={{backgroundImage:`${bild} `}}> </div>
@@ -18,7 +17,7 @@ const Product = ({product  }) => {
           </Typography>
 
           <Typography variant='h4'>
-                      {product.Price}<Euro></Euro>
+                      {product.Price +"€"}
           </Typography>
 
           <Typography variant='h8' color='textSecondary'>{product.Description}
